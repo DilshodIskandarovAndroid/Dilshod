@@ -30,7 +30,7 @@ public class ActivityOne extends AppCompatActivity
     CardView button1, button2;
 
       private Button button3;
-
+// Yuklandimi?
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
