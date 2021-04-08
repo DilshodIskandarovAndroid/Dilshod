@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.SearchView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,7 +29,7 @@ public class ActivityOne extends AppCompatActivity
     public static ArrayList<Model> list = new ArrayList<>();
     CardView button1, button2;
 
-    //  private Button button3;
+      private Button button3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
