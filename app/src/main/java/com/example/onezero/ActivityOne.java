@@ -29,8 +29,8 @@ public class ActivityOne extends AppCompatActivity
     public static ArrayList<Model> list = new ArrayList<>();
     CardView button1, button2;
 
-      private Button button3;
-// Yuklandimi?
+//      private Button button3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
