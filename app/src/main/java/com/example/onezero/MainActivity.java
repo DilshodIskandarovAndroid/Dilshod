@@ -2,7 +2,6 @@ package com.example.onezero;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.GridLayout;
