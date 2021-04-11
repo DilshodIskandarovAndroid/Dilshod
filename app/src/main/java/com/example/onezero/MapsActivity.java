@@ -6,17 +6,11 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
-import android.app.Dialog;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -26,6 +20,17 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+//        LatLng urganch = new LatLng(41.53580345435453, 60.62263293801623);
+//        mMap.addMarker(new MarkerOptions().position(urganch).title("Urgench"));
+//        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(urganch, 10f));
+        Log.d(TAG, "onMapRead: map is ready");
+
+        Toast.makeText(this, "Succesful", Toast.LENGTH_SHORT).show();
+    }
 
     private GoogleMap mMap;
     private static final String TAG = "MapActivity";
@@ -44,9 +49,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         getLocationPermission();
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
+//        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+//                .findFragmentById(R.id.map);
+//        mapFragment.getMapAsync(this);
     }
 
     private void initMap() {
@@ -78,18 +83,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-
-        LatLng urganch = new LatLng(41.53580345435453, 60.62263293801623);
-        mMap.addMarker(new MarkerOptions().position(urganch).title("Urgench"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(urganch, 10f));
-        Toast.makeText(this, "Succesful", Toast.LENGTH_SHORT).show();
-        Log.d(TAG,"onMapRead: map is ready");
-
-
-    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {

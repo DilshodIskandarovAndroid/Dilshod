@@ -45,13 +45,10 @@ public class Activity_pars_data extends AppCompatActivity {
     }
 
     private void init(){
-        Button map = (Button) findViewById(R.id.map);
-        map.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Activity_pars_data.this, MapsActivity.class);
-                startActivity(intent);
-            }
+        Button btnMap = findViewById(R.id.btnMap);
+        btnMap.setOnClickListener(view -> {
+            Intent intent = new Intent(Activity_pars_data.this, MapsActivity.class);
+            startActivity(intent);
         });
     }
 
@@ -78,10 +75,10 @@ public class Activity_pars_data extends AppCompatActivity {
 
 
 
-
-    public void map(View view)
-    {
-        Intent intent = new Intent(Activity_pars_data.this, MapsActivity.class);
-        startActivity(intent);
-    }
+//
+//    public void map(View view)
+//    {
+//        Intent intent = new Intent(Activity_pars_data.this, MapsActivity.class);
+//        startActivity(intent);
+//    }
 }
