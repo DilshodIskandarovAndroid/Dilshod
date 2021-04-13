@@ -4,4 +4,19 @@
     <string name="soglikvazirlik">O\ʻzbekiston Respublikasi Sog\ʻliqni saqlash vazirligi web-sahifasi</string>
     <string name="one_zero_one">ONE ZERO ONE</string>
     <string name="title_activity_maps">Map</string>
+
+    <string-array name="viloyatlar">
+        <item>Toshkent</item>
+        <item>Andijon</item>
+        <item>Namangan</item>
+        <item>Farg\'ona</item>
+        <item>Sirdaryo</item>
+        <item>Jizzax</item>
+        <item>Samarqand</item>
+        <item>Buxoro</item>
+        <item>Navoiy</item>
+        <item>Qashqadaryo</item>
+        <item>Surxondaryo</item>
+        <item>Xorazm</item>
+    </string-array>
 </resources>
