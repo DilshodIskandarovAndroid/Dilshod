@@ -1,22 +1,34 @@
 <resources>
-    <string name="app_name">Onezero</string>
-    <string name="onezerothree">Tez tibbiy yordam xizmati</string>
+    <string name="app_name">Hotlines</string>
     <string name="soglikvazirlik">O\ʻzbekiston Respublikasi Sog\ʻliqni saqlash vazirligi web-sahifasi</string>
-    <string name="one_zero_one">ONE ZERO ONE</string>
     <string name="title_activity_maps">Map</string>
 
-    <string-array name="viloyatlar">
-        <item>Toshkent</item>
-        <item>Andijon</item>
-        <item>Namangan</item>
-        <item>Farg\'ona</item>
-        <item>Sirdaryo</item>
-        <item>Jizzax</item>
-        <item>Samarqand</item>
-        <item>Buxoro</item>
-        <item>Navoiy</item>
-        <item>Qashqadaryo</item>
-        <item>Surxondaryo</item>
-        <item>Xorazm</item>
+    <string name="teztibbiy">Тез тиббий ёрдам хизмати</string>
+    <string name="lifeguard">Фавқулодда вазиятлар вазирлиги</string>
+    <string name="hotlines">Ишонч телефонлари</string>
+    <string name="todo">TODO</string>
+    <string name="yogin">Ёнғин хавфсизлиги хизмати</string>
+    <string name="gaz">Газ авария диспетчерлик хизмати</string>
+    <string name="soliq">Ўзбекистон Республикаси Давлат солиқ қўмитаси</string>
+    <string name="yagonadarcha">Ягона интерактив давлат хизматлари портали</string>
+    <string name="pensiya">Пенсия жамғармаси</string>
+    <string name="bandlik">Ўзбекистон Республикаси Бандлик ва меҳнат муносабатлари вазирлиги</string>
+    <string name="ichkiishlar">Ўзбекистон Республикаси Ички ишлар вазирлиги</string>
+    <string name="moliya">Ўзбекистон Республикаси Молия вазирлиги</string>
+
+    <string-array name="Viloyatlar">
+
+        <item>toshkent</item>
+        <item>andijon</item>
+        <item>namangan</item>
+        <item>farg\'ona</item>
+        <item>sirdaryo</item>
+        <item>jizzax</item>
+        <item>samarqand</item>
+        <item>buxoro</item>
+        <item>navoiy</item>
+        <item>qashqadaryo</item>
+        <item>surxondaryo</item>
+        <item>xorazm</item>
     </string-array>
 </resources>

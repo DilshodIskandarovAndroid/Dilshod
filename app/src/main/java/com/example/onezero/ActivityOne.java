@@ -17,6 +17,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.Adapter;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ActivityOne extends AppCompatActivity  implements AdapterView.OnItemSelectedListener {
+public class ActivityOne extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private RecyclerView recyclerView;
     private final FirebaseDatabase db = FirebaseDatabase.getInstance();
@@ -41,12 +42,10 @@ public class ActivityOne extends AppCompatActivity  implements AdapterView.OnIte
         setContentView(R.layout.activity_one);
 
         Spinner spinner = findViewById(R.id.spinner);
-        ArrayAdapter<CharSequence> adapters = ArrayAdapter.createFromResource(this,R.array.viloyatlar, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapters = ArrayAdapter.createFromResource(this, R.array.Viloyatlar, android.R.layout.simple_spinner_item);
         adapters.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapters);
-
-
-
+        spinner.setOnItemSelectedListener(this);
 
         initsearch();
         button1 = findViewById(R.id.btn1);
@@ -64,17 +63,14 @@ public class ActivityOne extends AppCompatActivity  implements AdapterView.OnIte
 
         list = new ArrayList<>();
 
-        Adapter adapter = new com.example.onezero.Adapter(this,list);
+        Adapter adapter = new com.example.onezero.Adapter(this, list);
         recyclerView.setAdapter(adapter);
 
-        root.addValueEventListener(new ValueEventListener()
-        {
+        root.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot)
-            {
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                for (DataSnapshot dataSnapshot : snapshot.getChildren())
-                {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     Model model = dataSnapshot.getValue(Model.class);
                     list.add(model);
                 }
@@ -94,7 +90,6 @@ public class ActivityOne extends AppCompatActivity  implements AdapterView.OnIte
         });
 
         button2.setOnClickListener(view -> gotoUrl());
-
 //        button3.setOnClickListener(new android.view.View.OnClickListener() {
 //            @Override
 //            public void onClick(android.view.View view) {
@@ -104,60 +99,42 @@ public class ActivityOne extends AppCompatActivity  implements AdapterView.OnIte
 //                startActivity(chooser);
 //            }
 //        });
-
     }
 
-    private void initsearch()
-    {
+    private void initsearch() {
         SearchView searchView = findViewById(R.id.search);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public boolean onQueryTextSubmit(String s)
-            {
+            public boolean onQueryTextSubmit(String s) {
                 return false;
             }
 
             @Override
-            public boolean onQueryTextChange(String s)
-            {
+            public boolean onQueryTextChange(String s) {
                 ArrayList<Model> filteredModels = new ArrayList<>();
-                for (Model model: list)
-                {
-                    if (model.getNomi().toLowerCase().contains(s.toLowerCase()))
-                    {
+                for (Model model : list) {
+                    if (model.getNomi().toLowerCase().contains(s.toLowerCase())) {
                         filteredModels.add(model);
-
                     }
                 }
 
                 Adapter adapter = new com.example.onezero.Adapter(getApplicationContext(), filteredModels);
                 recyclerView.setAdapter(adapter);
-
                 return false;
             }
         });
-
     }
 
-
-
-
-
-    private void gotoUrl()
-    {
+    private void gotoUrl() {
         Uri uri = Uri.parse("https://www.minzdrav.uz/uz/");
         startActivity(new Intent(Intent.ACTION_VIEW, uri));
 
     }
 
-    private void filterList(String status)
-    {
-//
+    private void filterList(String status) {
         ArrayList<Model> filteredModels = new ArrayList<>();
-        for (Model model : list)
-        {
-            if (model.getNomi().toLowerCase().contains(status ))
-            {
+        for (Model model : list) {
+            if (model.getNomi().toLowerCase().contains(status)) {
                 filteredModels.add(model);
             }
         }
@@ -165,25 +142,11 @@ public class ActivityOne extends AppCompatActivity  implements AdapterView.OnIte
         recyclerView.setAdapter(adapter);
     }
 
-    public void btns1(View view) {
-
-        Adapter adapter = new com.example.onezero.Adapter(getApplicationContext(), list);
-        recyclerView.setAdapter(adapter);
-    }
-
-    public void btns2(View view) {
-        filterList("urganch");
-
-    }
-
-    public void btns3(View view) {
-        filterList("shovot");
-    }
-
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String text = parent.getItemAtPosition(position).toString();
-        Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
+        String textspinner = parent.getItemAtPosition(position).toString();
+        Toast.makeText(this, textspinner, Toast.LENGTH_SHORT).show();
+        filterList(textspinner);
     }
 
     @Override

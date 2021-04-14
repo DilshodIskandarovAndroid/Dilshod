@@ -38,7 +38,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
     public void onBindViewHolder(ViewHolder holder, int position)
     {
         Model model = mList.get(position);
-        holder.nomi.setText(model.getNomi());
+        holder.Nomi.setText(model.getNomi());
         holder.manzili.setText(model.getManzili());
         holder.raqami.setText(model.getRaqami());
         holder.joylashuvi.setText(model.getJoylashuvi());
@@ -68,12 +68,12 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
 
     public static class ViewHolder extends RecyclerView.ViewHolder
     {
-        TextView nomi, manzili, raqami, joylashuvi;
+        TextView Nomi, manzili, raqami, joylashuvi;
 
         public ViewHolder(View itemView)
         {
             super(itemView);
-            nomi = itemView.findViewById(R.id.nomi);
+            Nomi = itemView.findViewById(R.id.Nomi);
             manzili = itemView.findViewById(R.id.manzili);
             raqami = itemView.findViewById(R.id.raqami);
             joylashuvi = itemView.findViewById(R.id.joylashuvi);

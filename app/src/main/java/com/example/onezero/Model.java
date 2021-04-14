@@ -3,24 +3,24 @@ package com.example.onezero;
 public class Model
 
 {
-    String nomi,manzili,raqami,joylashuvi;
+    String Nomi,manzili,raqami,joylashuvi;
 
     public Model() {
     }
 
-    public Model(String nomi, String manzili, String raqami, String joylashuvi) {
-        this.nomi = nomi;
+    public Model(String Nomi, String manzili, String raqami, String joylashuvi) {
+        this.Nomi = Nomi;
         this.manzili = manzili;
         this.raqami = raqami;
         this.joylashuvi = joylashuvi;
     }
 
     public String getNomi() {
-        return nomi;
+        return Nomi;
     }
 
-    public void setNomi(String nomi) {
-        this.nomi = nomi;
+    public void setNomi(String Nomi) {
+        this.Nomi = Nomi;
     }
 
     public String getManzili() {
