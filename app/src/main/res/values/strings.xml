@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">Hotlines</string>
-    <string name="soglikvazirlik">O\ʻzbekiston Respublikasi Sog\ʻliqni saqlash vazirligi web-sahifasi</string>
+
+    <string name="app_name">Қулай ҳудуд</string>
+    <string name="soglikvazirlik">Ўзбекистон Республикаси Соғлиқни сақлаш вазирлиги wеб-саҳифаси</string>
     <string name="title_activity_maps">Map</string>
 
     <string name="teztibbiy">Тез тиббий ёрдам хизмати</string>
     <string name="lifeguard">Фавқулодда вазиятлар вазирлиги</string>
-    <string name="hotlines">Ишонч телефонлари</string>
-    <string name="todo">TODO</string>
+    <string name="hotlines">Қулай ҳудуд</string>
     <string name="yogin">Ёнғин хавфсизлиги хизмати</string>
     <string name="gaz">Газ авария диспетчерлик хизмати</string>
     <string name="soliq">Ўзбекистон Республикаси Давлат солиқ қўмитаси</string>
@@ -17,10 +17,10 @@
     <string name="moliya">Ўзбекистон Республикаси Молия вазирлиги</string>
 
     <string-array name="Viloyatlar">
-
-        <item>toshkent</item>
-        <item>andijon</item>
-        <item>namangan</item>
+        <item>Вилоятлар кесимида</item>
+        <item>тошкент</item>
+        <item>андижон</item>
+        <item>наманган</item>
         <item>farg\'ona</item>
         <item>sirdaryo</item>
         <item>jizzax</item>
@@ -30,5 +30,53 @@
         <item>qashqadaryo</item>
         <item>surxondaryo</item>
         <item>xorazm</item>
+    </string-array>
+
+
+    <string-array name="Toshkent">
+        <item>Zangiota tumani</item>
+        <item>Angren shahri</item>
+        <item>Yuqori chirchiq tumani</item>
+        <item>Yangiyo\'l tumani</item>
+        <item>Quyi chirchiq tumani</item>
+        <item>Qibray tumani</item>
+        <item>Piskent tumani</item>
+        <item>Parkent tumani</item>
+        <item>Oqqo\'rg\'on tumani</item>
+        <item>Olmaliq shahri</item>
+        <item>Ohangaron tumani</item>
+        <item>O\'rta chirchiq tumani</item>
+        <item>Angren shahri</item>
+        <item>Bekobod shahri</item>
+        <item>Bo\'ka tumani</item>
+        <item>Bo\'stonliq tumani</item>
+        <item>Chirchiq shahri</item>
+        <item>Chinoz tumani</item>
+    </string-array>
+
+    <string-array name="Andijon">
+        <item>Zangiota tumani</item>
+        <item>Angren shahri</item>
+        <item>Yuqori chirchiq tumani</item>
+        <item>Yangiyo\'l tumani</item>
+        <item>Quyi chirchiq tumani</item>
+        <item>Qibray tumani</item>
+        <item>Piskent tumani</item>
+        <item>Parkent tumani</item>
+        <item>Oqqo\'rg\'on tumani</item>
+        <item>Olmaliq shahri</item>
+        <item>Ohangaron tumani</item>
+        <item>O\'rta chirchiq tumani</item>
+        <item>Angren shahri</item>
+        <item>Bekobod shahri</item>
+        <item>Bo\'ka tumani</item>
+        <item>Bo\'stonliq tumani</item>
+        <item>Chirchiq shahri</item>
+        <item>Chinoz tumani</item>
+    </string-array>
+
+    <string-array name="Hechqaysi">
+        <item>Shahar yoki tuman</item>
+        <item>Viloyat nomini tanlang !</item>
     </string-array>
 </resources>

@@ -24,11 +24,11 @@ public class ActivitySplash extends AppCompatActivity {
                 .withTargetActivity(MainActivity.class)
                 .withSplashTimeOut(2000)
                 .withBackgroundResource(android.R.color.white)
-                .withBeforeLogoText("PenCod")
-                .withLogo(R.drawable.hotline);
+                .withBeforeLogoText("PenCod");
 
-        config.getBeforeLogoTextView().setTextColor(Color.BLACK);
-        config.getBeforeLogoTextView().setTextSize(20);
+        config.getBeforeLogoTextView().setTextColor(Color.RED);
+        config.getBeforeLogoTextView().setTextSize(40);
+
 
         View easySplashScreenView = config.create();
         setContentView(easySplashScreenView);
