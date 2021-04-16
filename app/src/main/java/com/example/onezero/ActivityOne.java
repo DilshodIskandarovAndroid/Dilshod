@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -35,22 +36,19 @@ public class ActivityOne extends AppCompatActivity implements AdapterView.OnItem
     CardView button1, button2;
     ArrayList<Model> filteredModels = new ArrayList<>();
 
-//      private Button button3;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one);
 
-//        initsearch();
+        Toolbar toolbar = findViewById(R.id.onetoolbar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         button1 = findViewById(R.id.btn1);
         button2 = findViewById(R.id.btn2);
-
-        Spinner spinnerviloyat = findViewById(R.id.spinnerviloyat);
-        ArrayAdapter<CharSequence> adapterviloyat = ArrayAdapter.createFromResource(this, R.array.Viloyatlar, android.R.layout.simple_spinner_item);
-        adapterviloyat.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerviloyat.setAdapter(adapterviloyat);
-        spinnerviloyat.setOnItemSelectedListener(this);
+        spinner();
 
         recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
@@ -82,6 +80,7 @@ public class ActivityOne extends AppCompatActivity implements AdapterView.OnItem
             intent1.setData(Uri.parse("tel:103"));
             startActivity(intent1);
         });
+    }
 
 //        button2.setOnClickListener(view -> gotoUrl());
 //        button3.setOnClickListener(new android.view.View.OnClickListener() {
@@ -93,31 +92,6 @@ public class ActivityOne extends AppCompatActivity implements AdapterView.OnItem
 //                startActivity(chooser);
 //            }
 //        });
-    }
-
-//    private void initsearch() {
-//        SearchView searchView = findViewById(R.id.search);
-//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//            @Override
-//            public boolean onQueryTextSubmit(String s) {
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onQueryTextChange(String s) {
-//                ArrayList<Model> filteredModels = new ArrayList<>();
-//                for (Model model : list) {
-//                    if (model.getNomi().toLowerCase().contains(s.toLowerCase())) {
-//                        filteredModels.add(model);
-//                    }
-//                }
-//
-//                Adapter adapter = new com.example.onezero.Adapter(getApplicationContext(), filteredModels);
-//                recyclerView.setAdapter(adapter);
-//                return false;
-//            }
-//        });
-//    }
 //
 //    private void gotoUrl() {
 //        Uri uri = Uri.parse("https://www.minzdrav.uz/uz/");
@@ -136,33 +110,50 @@ public class ActivityOne extends AppCompatActivity implements AdapterView.OnItem
         recyclerView.setAdapter(adapter);
     }
 
+    private void spinner() {
+
+        Spinner spinnerviloyat = findViewById(R.id.spinnerviloyat);
+        ArrayAdapter<CharSequence> adapterviloyat = ArrayAdapter.createFromResource(this, R.array.Viloyatlar, android.R.layout.simple_spinner_item);
+        adapterviloyat.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerviloyat.setAdapter(adapterviloyat);
+        spinnerviloyat.setOnItemSelectedListener(this);
+    }
+
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
         String textspinner = parent.getItemAtPosition(position).toString();
         Toast.makeText(this, textspinner, Toast.LENGTH_SHORT).show();
 
-        if (textspinner.equals("тошкент")) {
+        switch (textspinner) {
+            case "тошкент": {
 
-            Spinner spinnertuman = findViewById(R.id.spinnertuman);
-            ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Toshkent, android.R.layout.simple_spinner_item);
-            adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spinnertuman.setAdapter(adaptertuman);
-            spinnertuman.setOnItemSelectedListener(this);
+                Spinner spinnertuman = findViewById(R.id.spinnertuman);
+                ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Toshkent, android.R.layout.simple_spinner_item);
+                adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinnertuman.setAdapter(adaptertuman);
+                spinnertuman.setOnItemSelectedListener(this);
 
-        } else if (textspinner.equals("андижон")) {
-            Spinner spinnertuman = findViewById(R.id.spinnertuman);
-            ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Andijon, android.R.layout.simple_spinner_item);
-            adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spinnertuman.setAdapter(adaptertuman);
-            spinnertuman.setOnItemSelectedListener(this);
+                break;
+            }
+            case "андижон": {
+                Spinner spinnertuman = findViewById(R.id.spinnertuman);
+                ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Andijon, android.R.layout.simple_spinner_item);
+                adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinnertuman.setAdapter(adaptertuman);
+                spinnertuman.setOnItemSelectedListener(this);
 
-        } else if (textspinner.equals("Вилоятлар кесимида")) {
-            Spinner spinnertuman = findViewById(R.id.spinnertuman);
-            ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Hechqaysi, android.R.layout.simple_spinner_item);
-            adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spinnertuman.setAdapter(adaptertuman);
-            spinnertuman.setOnItemSelectedListener(this);
+                break;
+            }
+            case "Вилоятлар кесимида": {
+                Spinner spinnertuman = findViewById(R.id.spinnertuman);
+                ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Hechqaysi, android.R.layout.simple_spinner_item);
+                adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinnertuman.setAdapter(adaptertuman);
+                spinnertuman.setOnItemSelectedListener(this);
 
+                break;
+            }
         }
 //        filterList(textspinner);
     }

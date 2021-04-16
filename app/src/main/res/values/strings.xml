@@ -3,7 +3,6 @@
     <string name="app_name">Қулай ҳудуд</string>
     <string name="soglikvazirlik">Ўзбекистон Республикаси Соғлиқни сақлаш вазирлиги wеб-саҳифаси</string>
     <string name="title_activity_maps">Map</string>
-
     <string name="teztibbiy">Тез тиббий ёрдам хизмати</string>
     <string name="lifeguard">Фавқулодда вазиятлар вазирлиги</string>
     <string name="hotlines">Қулай ҳудуд</string>
@@ -15,68 +14,76 @@
     <string name="bandlik">Ўзбекистон Республикаси Бандлик ва меҳнат муносабатлари вазирлиги</string>
     <string name="ichkiishlar">Ўзбекистон Республикаси Ички ишлар вазирлиги</string>
     <string name="moliya">Ўзбекистон Республикаси Молия вазирлиги</string>
+    <string name="_103">103</string>
+    <string name="umumiy_raqam">Қисқа рақам</string>
+    <string name="todo">TODO</string>
+    <string name="menu">menu</string>
+    <string name="menu1">menu1</string>
+    <string name="menu2">menu2</string>
+    <string name="menu3">menu3</string>
+    <string name="ijtimoitarmoqlar">Ижтимоий тармоқларда</string>
 
     <string-array name="Viloyatlar">
         <item>Вилоятлар кесимида</item>
-        <item>тошкент</item>
-        <item>андижон</item>
-        <item>наманган</item>
-        <item>farg\'ona</item>
-        <item>sirdaryo</item>
-        <item>jizzax</item>
-        <item>samarqand</item>
-        <item>buxoro</item>
-        <item>navoiy</item>
-        <item>qashqadaryo</item>
-        <item>surxondaryo</item>
-        <item>xorazm</item>
+        <item>Тошкент</item>
+        <item>Aндижон</item>
+        <item>Наманган</item>
+        <item>Фарғона</item>
+        <item>Сирдарё</item>
+        <item>Жиззах </item>
+        <item>Самарқанд</item>
+        <item>Бухоро</item>
+        <item>Навоий</item>
+        <item>Қашқадарё</item>
+        <item>Сурхондарё</item>
+        <item>Хоразм</item>
     </string-array>
 
-
     <string-array name="Toshkent">
-        <item>Zangiota tumani</item>
-        <item>Angren shahri</item>
-        <item>Yuqori chirchiq tumani</item>
-        <item>Yangiyo\'l tumani</item>
-        <item>Quyi chirchiq tumani</item>
-        <item>Qibray tumani</item>
-        <item>Piskent tumani</item>
-        <item>Parkent tumani</item>
-        <item>Oqqo\'rg\'on tumani</item>
-        <item>Olmaliq shahri</item>
-        <item>Ohangaron tumani</item>
-        <item>O\'rta chirchiq tumani</item>
-        <item>Angren shahri</item>
-        <item>Bekobod shahri</item>
-        <item>Bo\'ka tumani</item>
-        <item>Bo\'stonliq tumani</item>
-        <item>Chirchiq shahri</item>
-        <item>Chinoz tumani</item>
+        <item> Aнгрен шаҳри</item>
+        <item>Бекобод шаҳри</item>
+        <item>Бекобод тумани</item>
+        <item>Бўка тумани</item>
+        <item>Бўстонлиқ тумани</item>
+        <item>Чиноз тумани</item>
+        <item>Чирчиқ шаҳри</item>
+        <item>Ўрта чирчиқ тумани</item>
+        <item>Оҳангарон тумани</item>
+        <item>Олмалиқ шаҳри</item>
+        <item>Оққўрғон тумани</item>
+        <item> Паркент тумани</item>
+        <item>Пискент тумани</item>
+        <item>Қибрай тумани</item>
+        <item>Қуйи чирчиқ тумани</item>
+        <item>Янгийўл тумани</item>
+        <item>Юқори чирчиқ тумани</item>
+        <item>Зангиота тумани</item>
     </string-array>
 
     <string-array name="Andijon">
-        <item>Zangiota tumani</item>
-        <item>Angren shahri</item>
-        <item>Yuqori chirchiq tumani</item>
-        <item>Yangiyo\'l tumani</item>
-        <item>Quyi chirchiq tumani</item>
-        <item>Qibray tumani</item>
-        <item>Piskent tumani</item>
-        <item>Parkent tumani</item>
-        <item>Oqqo\'rg\'on tumani</item>
-        <item>Olmaliq shahri</item>
-        <item>Ohangaron tumani</item>
-        <item>O\'rta chirchiq tumani</item>
-        <item>Angren shahri</item>
-        <item>Bekobod shahri</item>
-        <item>Bo\'ka tumani</item>
-        <item>Bo\'stonliq tumani</item>
-        <item>Chirchiq shahri</item>
-        <item>Chinoz tumani</item>
+
     </string-array>
 
-    <string-array name="Hechqaysi">
-        <item>Shahar yoki tuman</item>
-        <item>Viloyat nomini tanlang !</item>
+    <string-array name="Namangan">
+
     </string-array>
+
+
+<!--    <string-array name="">-->
+<!--        -->
+<!--    </string-array>    <string-array name="">-->
+<!--        -->
+<!--    </string-array>    <string-array name="">-->
+<!--        -->
+<!--    </string-array>    <string-array name="">-->
+<!--        -->
+<!--    </string-array>    <string-array name="">-->
+<!--        -->
+<!--    </string-array>    <string-array name="">-->
+<!--        -->
+<!--    </string-array>    <string-array name="">-->
+<!--        -->
+<!--    </string-array>    <string-array name="">-->
+<!--        -->
+<!--    </string-array>-->
 </resources>

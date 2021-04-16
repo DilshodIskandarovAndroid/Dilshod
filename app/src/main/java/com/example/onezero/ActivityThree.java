@@ -53,6 +53,7 @@ public class ActivityThree extends AppCompatActivity {
                     Toast.makeText(ActivityThree.this, "Data Saved", Toast.LENGTH_SHORT).show();
                 }
             });
+            finish();
         });
     }
 }

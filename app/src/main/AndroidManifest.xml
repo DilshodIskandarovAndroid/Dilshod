@@ -5,18 +5,16 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".OfflineFireBase"
         android:allowBackup="true"
-        android:icon="@mipmap/hotline"
+        android:icon="@drawable/abc_vector_test"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/hotline_foreground"
+        android:roundIcon="@drawable/abc_vector_test"
         android:supportsRtl="true"
         android:theme="@style/Theme.Onezero">
-        <activity android:name=".MainActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -26,11 +24,22 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".Activity_pars_data" />
-        <activity android:name=".ActivityOne" />
-        <activity android:name=".ActivityTwo" />
-        <activity android:name=".ActivityThree" />
-        <activity android:name=".ActivityFour" />
-        <activity android:name=".ActivityFive" />
+        <activity
+            android:name=".ActivityOne"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ActivityTwo"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ActivityThree"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ActivityFour"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ActivityFive"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".ActivitySplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

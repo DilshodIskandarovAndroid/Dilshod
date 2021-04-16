@@ -6,6 +6,9 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.GridLayout;
 import android.widget.TextView;
 
@@ -14,7 +17,13 @@ import maes.tech.intentanim.CustomIntent;
 public class MainActivity extends AppCompatActivity {
 
     GridLayout mainGrid;
-    private TextView textGrid, birtxt, ikkitxt, uchtxt, torttxtx;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,16 +33,18 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        textGrid = findViewById(R.id.textGrid);
-        birtxt = findViewById(R.id.birtxt);
-        ikkitxt = findViewById(R.id.ikkitxt);
-        uchtxt = findViewById(R.id.uchtxt);
-        torttxtx=findViewById(R.id.torttxtx);
-
-
         mainGrid = findViewById(R.id.mainGrid);
         setSingleEvent(mainGrid);
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+        if (id == R.id.birnchiitem){
+
+        }
+        return true;
     }
 
     private void setSingleEvent(GridLayout mainGrid) {
