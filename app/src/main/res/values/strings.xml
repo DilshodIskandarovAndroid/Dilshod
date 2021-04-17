@@ -24,25 +24,30 @@
     <string name="ijtimoitarmoqlar">Ижтимоий тармоқларда</string>
 
     <string-array name="Viloyatlar">
-        <item>Вилоятлар кесимида</item>
-        <item>Тошкент</item>
-        <item>Aндижон</item>
-        <item>Наманган</item>
-        <item>Фарғона</item>
-        <item>Сирдарё</item>
-        <item>Жиззах </item>
-        <item>Самарқанд</item>
-        <item>Бухоро</item>
-        <item>Навоий</item>
-        <item>Қашқадарё</item>
-        <item>Сурхондарё</item>
-        <item>Хоразм</item>
+        <item>Вилоятлар бўйича саралаш</item>
+        <item>Тошкент вилояти</item>
+        <item>Андижон вилояти</item>
+        <item>Наманган вилояти</item>
+        <item>Фарғона вилояти</item>
+        <item>Сирдарё вилояти</item>
+        <item>Жиззах вилояти</item>
+        <item>Самарқанд вилояти</item>
+        <item>Бухоро вилояти</item>
+        <item>Навоий вилояти</item>
+        <item>Қашқадарё вилояти</item>
+        <item>Сурхондарё вилояти</item>
+        <item>Хоразм вилояти</item>
+    </string-array>
+
+    <string-array name="Shaharvatumanlar">
+        <item>Вилоят номини танланг</item>
     </string-array>
 
     <string-array name="Toshkent">
-        <item> Aнгрен шаҳри</item>
+        <item>Aнгрен шаҳри</item>
+        <item>Шаҳар ёки туман номи</item>
         <item>Бекобод шаҳри</item>
-        <item>Бекобод тумани</item>
+        <item>Бекобод тумани</item>   Тошкент вилояти
         <item>Бўка тумани</item>
         <item>Бўстонлиқ тумани</item>
         <item>Чиноз тумани</item>
@@ -61,29 +66,36 @@
     </string-array>
 
     <string-array name="Andijon">
+        <item>Andijon tumalari</item>
 
     </string-array>
 
     <string-array name="Namangan">
+        <item>Namangan tumanlari</item>
 
     </string-array>
 
+    <string-array name="Fargona">
+        <item>Fargona номини танланг</item>
+    </string-array>
+    <string-array name="Sirdaryo">
+        <item>Sirdaryo номини танланг</item>
+    </string-array>
+    <string-array name="Jizzax">
+        <item>Вилоят номини танланг</item>
+    </string-array>
+    <string-array name="Samarqand">
+        <item>Вилоят номини танланг</item>
+    </string-array>
+    <string-array name="Buxoro">
+        <item>Вилоят номини танланг</item>
+    </string-array>
+    <string-array name="Navoiy">
+        <item>Вилоят номини танланг</item>
+    </string-array>
+    <string-array name="Qashqadaryo">
+        <item>Вилоят номини танланг</item>
+    </string-array>
 
-<!--    <string-array name="">-->
-<!--        -->
-<!--    </string-array>    <string-array name="">-->
-<!--        -->
-<!--    </string-array>    <string-array name="">-->
-<!--        -->
-<!--    </string-array>    <string-array name="">-->
-<!--        -->
-<!--    </string-array>    <string-array name="">-->
-<!--        -->
-<!--    </string-array>    <string-array name="">-->
-<!--        -->
-<!--    </string-array>    <string-array name="">-->
-<!--        -->
-<!--    </string-array>    <string-array name="">-->
-<!--        -->
-<!--    </string-array>-->
+
 </resources>

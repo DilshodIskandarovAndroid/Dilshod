@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -34,7 +35,8 @@ public class ActivityOne extends AppCompatActivity implements AdapterView.OnItem
     private final DatabaseReference root = db.getReference().child("User");
     public static ArrayList<Model> list = new ArrayList<>();
     CardView button1, button2;
-    ArrayList<Model> filteredModels = new ArrayList<>();
+    private Spinner spinnertuman;
+    private String viloyatnomi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +45,9 @@ public class ActivityOne extends AppCompatActivity implements AdapterView.OnItem
 
         Toolbar toolbar = findViewById(R.id.onetoolbar);
         setSupportActionBar(toolbar);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        spinnertuman = findViewById(R.id.spinnertuman);
         button1 = findViewById(R.id.btn1);
         button2 = findViewById(R.id.btn2);
         spinner();
@@ -119,43 +121,170 @@ public class ActivityOne extends AppCompatActivity implements AdapterView.OnItem
         spinnerviloyat.setOnItemSelectedListener(this);
     }
 
+
+
+
+
+
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-        String textspinner = parent.getItemAtPosition(position).toString();
-        Toast.makeText(this, textspinner, Toast.LENGTH_SHORT).show();
+        String textspinnerviloyat = parent.getItemAtPosition(position).toString();
 
-        switch (textspinner) {
-            case "тошкент": {
+        switch (textspinnerviloyat) {
 
-                Spinner spinnertuman = findViewById(R.id.spinnertuman);
+            case "Вилоятлар бўйича саралаш": {
+                ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Shaharvatumanlar, android.R.layout.simple_spinner_item);
+                adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinnertuman.setAdapter(adaptertuman);
+                spinnertuman.setOnItemSelectedListener(this);
+
+                Adapter adapter = new com.example.onezero.Adapter(getApplicationContext(), list);
+                recyclerView.setAdapter(adapter);
+
+                break;
+            }
+            case "Тошкент вилояти": {
                 ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Toshkent, android.R.layout.simple_spinner_item);
                 adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnertuman.setAdapter(adaptertuman);
                 spinnertuman.setOnItemSelectedListener(this);
+                filterList("тошкент вилояти");
+                final String viloyatnomi = "тошкент вилояти" ;
 
                 break;
             }
-            case "андижон": {
-                Spinner spinnertuman = findViewById(R.id.spinnertuman);
+            case "Андижон вилояти": {
                 ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Andijon, android.R.layout.simple_spinner_item);
                 adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnertuman.setAdapter(adaptertuman);
                 spinnertuman.setOnItemSelectedListener(this);
-
+                filterList("андижон вилояти");
+                final String viloyatnomi = "андижон вилояти" ;
                 break;
             }
-            case "Вилоятлар кесимида": {
-                Spinner spinnertuman = findViewById(R.id.spinnertuman);
-                ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Hechqaysi, android.R.layout.simple_spinner_item);
+            case "Наманган вилояти": {
+                ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Namangan, android.R.layout.simple_spinner_item);
                 adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnertuman.setAdapter(adaptertuman);
                 spinnertuman.setOnItemSelectedListener(this);
+                filterList("наманган вилояти");
+                final String viloyatnomi = "наманган вилояти" ;
+                
+                break;
+            }
+            case "Фарғона вилояти": {
+                ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Fargona, android.R.layout.simple_spinner_item);
+                adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinnertuman.setAdapter(adaptertuman);
+                spinnertuman.setOnItemSelectedListener(this);
+                filterList("фарғона вилояти");
+                final String viloyatnomi = "фарғона вилояти" ;
+                
+                break;
+            }
+            case "Сирдарё вилояти": {
+                ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Sirdaryo, android.R.layout.simple_spinner_item);
+                adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinnertuman.setAdapter(adaptertuman);
+                spinnertuman.setOnItemSelectedListener(this);
+                filterList("сирдарё вилояти");
+                final String viloyatnomi = "сирдарё вилояти" ;
+                
+                break;
+            }
+            case "Жиззах вилояти": {
+                ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Jizzax, android.R.layout.simple_spinner_item);
+                adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinnertuman.setAdapter(adaptertuman);
+                spinnertuman.setOnItemSelectedListener(this);
+                filterList("жиззах вилояти");
+                final String viloyatnomi = "жиззах вилояти" ;
+                
+                break;
+            }
+            case "Самарқанд вилояти": {
+                ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Samarqand, android.R.layout.simple_spinner_item);
+                adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinnertuman.setAdapter(adaptertuman);
+                spinnertuman.setOnItemSelectedListener(this);
+                filterList("самарқанд вилояти");
+                final String viloyatnomi ="самарқанд вилояти" ;
+                
+                break;
+            }
+            case "Бухоро вилояти": {
+                ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Buxoro, android.R.layout.simple_spinner_item);
+                adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinnertuman.setAdapter(adaptertuman);
+                spinnertuman.setOnItemSelectedListener(this);
+                filterList("бухоро вилояти");
+                final String viloyatnomi = "бухоро вилояти" ;
+                
+                break;
+            }
+
+            case "Навоий вилояти": {
+                ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Navoiy, android.R.layout.simple_spinner_item);
+                adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinnertuman.setAdapter(adaptertuman);
+                spinnertuman.setOnItemSelectedListener(this);
+                filterList("навоий вилояти");
+                final String viloyatnomi = "навоий вилояти" ;
+                break;
+            }
+
+            case "Қашқадарё вилояти": {
+                ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Qashqadaryo, android.R.layout.simple_spinner_item);
+                adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinnertuman.setAdapter(adaptertuman);
+                spinnertuman.setOnItemSelectedListener(this);
+                filterList("кашқадарё вилояти");
+                final String viloyatnomi ="кашқадарё вилояти" ;
 
                 break;
             }
         }
-//        filterList(textspinner);
+
+
+        spinnertuman.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                String textspinnertuman = parent.getItemAtPosition(position).toString();
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+
+        });
     }
 
     @Override

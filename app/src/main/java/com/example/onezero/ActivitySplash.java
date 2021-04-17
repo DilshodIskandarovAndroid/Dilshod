@@ -22,7 +22,7 @@ public class ActivitySplash extends AppCompatActivity {
         EasySplashScreen config = new EasySplashScreen(ActivitySplash.this)
                 .withFullScreen()
                 .withTargetActivity(MainActivity.class)
-                .withSplashTimeOut(2000)
+                .withSplashTimeOut(100)
                 .withBackgroundResource(android.R.color.white)
                 .withBeforeLogoText("PenCod");
 
