@@ -44,8 +44,8 @@
     </string-array>
 
     <string-array name="Toshkent">
-        <item>Aнгрен шаҳри</item>
         <item>Шаҳар ёки туман номи</item>
+        <item>Aнгрен шаҳри</item>
         <item>Бекобод шаҳри</item>
         <item>Бекобод тумани</item>   Тошкент вилояти
         <item>Бўка тумани</item>
@@ -56,7 +56,7 @@
         <item>Оҳангарон тумани</item>
         <item>Олмалиқ шаҳри</item>
         <item>Оққўрғон тумани</item>
-        <item> Паркент тумани</item>
+        <item>Паркент тумани</item>
         <item>Пискент тумани</item>
         <item>Қибрай тумани</item>
         <item>Қуйи чирчиқ тумани</item>
@@ -67,35 +67,38 @@
 
     <string-array name="Andijon">
         <item>Andijon tumalari</item>
-
     </string-array>
 
     <string-array name="Namangan">
         <item>Namangan tumanlari</item>
-
     </string-array>
 
     <string-array name="Fargona">
         <item>Fargona номини танланг</item>
     </string-array>
+
     <string-array name="Sirdaryo">
         <item>Sirdaryo номини танланг</item>
     </string-array>
+
     <string-array name="Jizzax">
-        <item>Вилоят номини танланг</item>
-    </string-array>
-    <string-array name="Samarqand">
-        <item>Вилоят номини танланг</item>
-    </string-array>
-    <string-array name="Buxoro">
-        <item>Вилоят номини танланг</item>
-    </string-array>
-    <string-array name="Navoiy">
-        <item>Вилоят номини танланг</item>
-    </string-array>
-    <string-array name="Qashqadaryo">
-        <item>Вилоят номини танланг</item>
+        <item>Jizzax номини танланг</item>
     </string-array>
 
+    <string-array name="Samarqand">
+        <item>Samarqand номини танланг</item>
+    </string-array>
+
+    <string-array name="Buxoro">
+        <item>Buxoro номини танланг</item>
+    </string-array>
+
+    <string-array name="Navoiy">
+        <item>Navoiy номини танланг</item>
+    </string-array>
+
+    <string-array name="Qashqadaryo">
+        <item>Qashqadaryo номини танланг</item>
+    </string-array>
 
 </resources>

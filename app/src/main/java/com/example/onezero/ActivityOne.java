@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ActivityOne extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -35,8 +37,10 @@ public class ActivityOne extends AppCompatActivity implements AdapterView.OnItem
     private final DatabaseReference root = db.getReference().child("User");
     public static ArrayList<Model> list = new ArrayList<>();
     CardView button1, button2;
+
     private Spinner spinnertuman;
     private String viloyatnomi;
+    private String tumannomi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +49,14 @@ public class ActivityOne extends AppCompatActivity implements AdapterView.OnItem
 
         Toolbar toolbar = findViewById(R.id.onetoolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         spinnertuman = findViewById(R.id.spinnertuman);
+        spinnertuman.setOnItemSelectedListener(this);
+        spinner();
+
         button1 = findViewById(R.id.btn1);
         button2 = findViewById(R.id.btn2);
-        spinner();
 
         recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
@@ -121,11 +127,6 @@ public class ActivityOne extends AppCompatActivity implements AdapterView.OnItem
         spinnerviloyat.setOnItemSelectedListener(this);
     }
 
-
-
-
-
-
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
@@ -137,7 +138,6 @@ public class ActivityOne extends AppCompatActivity implements AdapterView.OnItem
                 ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Shaharvatumanlar, android.R.layout.simple_spinner_item);
                 adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnertuman.setAdapter(adaptertuman);
-                spinnertuman.setOnItemSelectedListener(this);
 
                 Adapter adapter = new com.example.onezero.Adapter(getApplicationContext(), list);
                 recyclerView.setAdapter(adapter);
@@ -148,9 +148,9 @@ public class ActivityOne extends AppCompatActivity implements AdapterView.OnItem
                 ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Toshkent, android.R.layout.simple_spinner_item);
                 adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnertuman.setAdapter(adaptertuman);
-                spinnertuman.setOnItemSelectedListener(this);
+
                 filterList("тошкент вилояти");
-                final String viloyatnomi = "тошкент вилояти" ;
+                viloyatnomi = "тошкент вилояти";
 
                 break;
             }
@@ -158,69 +158,69 @@ public class ActivityOne extends AppCompatActivity implements AdapterView.OnItem
                 ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Andijon, android.R.layout.simple_spinner_item);
                 adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnertuman.setAdapter(adaptertuman);
-                spinnertuman.setOnItemSelectedListener(this);
+
                 filterList("андижон вилояти");
-                final String viloyatnomi = "андижон вилояти" ;
+                viloyatnomi = "андижон вилояти";
                 break;
             }
             case "Наманган вилояти": {
                 ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Namangan, android.R.layout.simple_spinner_item);
                 adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnertuman.setAdapter(adaptertuman);
-                spinnertuman.setOnItemSelectedListener(this);
+
                 filterList("наманган вилояти");
-                final String viloyatnomi = "наманган вилояти" ;
-                
+                viloyatnomi = "наманган вилояти";
+
                 break;
             }
             case "Фарғона вилояти": {
                 ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Fargona, android.R.layout.simple_spinner_item);
                 adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnertuman.setAdapter(adaptertuman);
-                spinnertuman.setOnItemSelectedListener(this);
+
                 filterList("фарғона вилояти");
-                final String viloyatnomi = "фарғона вилояти" ;
-                
+                viloyatnomi = "фарғона вилояти";
+
                 break;
             }
             case "Сирдарё вилояти": {
                 ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Sirdaryo, android.R.layout.simple_spinner_item);
                 adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnertuman.setAdapter(adaptertuman);
-                spinnertuman.setOnItemSelectedListener(this);
+
                 filterList("сирдарё вилояти");
-                final String viloyatnomi = "сирдарё вилояти" ;
-                
+                viloyatnomi = "сирдарё вилояти";
+
                 break;
             }
             case "Жиззах вилояти": {
                 ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Jizzax, android.R.layout.simple_spinner_item);
                 adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnertuman.setAdapter(adaptertuman);
-                spinnertuman.setOnItemSelectedListener(this);
+
                 filterList("жиззах вилояти");
-                final String viloyatnomi = "жиззах вилояти" ;
-                
+                viloyatnomi = "жиззах вилояти";
+
                 break;
             }
             case "Самарқанд вилояти": {
                 ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Samarqand, android.R.layout.simple_spinner_item);
                 adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnertuman.setAdapter(adaptertuman);
-                spinnertuman.setOnItemSelectedListener(this);
+
                 filterList("самарқанд вилояти");
-                final String viloyatnomi ="самарқанд вилояти" ;
-                
+                viloyatnomi = "самарқанд вилояти";
+
                 break;
             }
             case "Бухоро вилояти": {
                 ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Buxoro, android.R.layout.simple_spinner_item);
                 adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnertuman.setAdapter(adaptertuman);
-                spinnertuman.setOnItemSelectedListener(this);
+
                 filterList("бухоро вилояти");
-                final String viloyatnomi = "бухоро вилояти" ;
-                
+                viloyatnomi = "бухоро вилояти";
+
                 break;
             }
 
@@ -228,9 +228,9 @@ public class ActivityOne extends AppCompatActivity implements AdapterView.OnItem
                 ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Navoiy, android.R.layout.simple_spinner_item);
                 adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnertuman.setAdapter(adaptertuman);
-                spinnertuman.setOnItemSelectedListener(this);
+
                 filterList("навоий вилояти");
-                final String viloyatnomi = "навоий вилояти" ;
+                viloyatnomi = "навоий вилояти";
                 break;
             }
 
@@ -238,9 +238,9 @@ public class ActivityOne extends AppCompatActivity implements AdapterView.OnItem
                 ArrayAdapter<CharSequence> adaptertuman = ArrayAdapter.createFromResource(this, R.array.Qashqadaryo, android.R.layout.simple_spinner_item);
                 adaptertuman.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnertuman.setAdapter(adaptertuman);
-                spinnertuman.setOnItemSelectedListener(this);
+
                 filterList("кашқадарё вилояти");
-                final String viloyatnomi ="кашқадарё вилояти" ;
+                viloyatnomi = "кашқадарё вилояти";
 
                 break;
             }
@@ -248,35 +248,62 @@ public class ActivityOne extends AppCompatActivity implements AdapterView.OnItem
 
 
         spinnertuman.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            
+
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view, int positiontuman, long id) {
 
-                String textspinnertuman = parent.getItemAtPosition(position).toString();
+                String textspinnertuman = parent.getItemAtPosition(positiontuman).toString();
 
+                switch (textspinnertuman) {
+                    case "Aнгрен шаҳри": {
+                        tumannomi = "ангрен шаҳри";
+
+                        break;
+                    }
+
+                    case "Бекобод шаҳри": {
+                        tumannomi = "бекобод шаҳри";
+                        break;
+                    }
+                    case "Бекобод тумани": {
+                        tumannomi = "бекобод тумани";
+                        break;
+                    }
+                    case "Бўка тумани": {
+                        tumannomi = "бўка тумани";
+                        break;
+                    }
+                    case "Бўстонлиқ тумани": {
+                        tumannomi = "бўстонлиқ тумани";
+                        break;
+                    }
+                    case "Чиноз тумани": {
+                        tumannomi = "чиноз тумани";
+                        break;
+                    }
+                    case "Чирчиқ шаҳри": {
+                        tumannomi = "чирчиқ шаҳри";
+                        break;
+                    }
+                    case "Ўрта чирчиқ тумани<": {
+                        tumannomi = "ўрта чирчиқ тумани";
+                        break;
+                    }
+                    case "Оҳангарон тумани": {
+                        tumannomi = "оҳангарон тумани";
+                        break;
+                    }
+                    case "Олмалиқ шаҳри": {
+                        tumannomi = "олмалиқ шаҳри";
+                        break;
+                    }
+                    case "Оққўрғон тумани": {
+                        tumannomi = "оққўрғон тумани";
+                        break;
+                    }
+                }
 
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             @Override
