@@ -15,7 +15,6 @@
         android:roundIcon="@drawable/abc_vector_test"
         android:supportsRtl="true"
         android:theme="@style/Theme.Onezero">
-        <activity android:name=".Collapsing" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
