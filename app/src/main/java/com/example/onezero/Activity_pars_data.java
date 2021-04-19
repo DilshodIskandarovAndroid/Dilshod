@@ -2,6 +2,7 @@ package com.example.onezero;
 
 import android.content.Intent;
 import android.content.IntentSender;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -44,5 +45,12 @@ public class Activity_pars_data extends AppCompatActivity {
     public void map(View view) {
         Intent intent = new Intent(Activity_pars_data.this, MapsActivity.class);
         startActivity(intent);
+    }
+
+    public void Call(View view) {
+        String number = textView3.getText().toString();
+        Intent intent2 = new Intent(Intent.ACTION_DIAL);
+        intent2.setData(Uri.parse("tel:" + number));
+        startActivity(intent2);
     }
 }

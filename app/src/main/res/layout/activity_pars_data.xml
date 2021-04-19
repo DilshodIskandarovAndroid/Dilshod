@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -32,18 +31,25 @@
         android:layout_margin="15dp"
         android:text="TextView" />
 
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Call"
+        android:text="Call" />
+
+
     <TextView
         android:id="@+id/textView4"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:text="TextView" />
 
     <Button
-        android:onClick="map"
         android:id="@+id/btnMap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="map"
         android:text="Button" />
 </LinearLayout>

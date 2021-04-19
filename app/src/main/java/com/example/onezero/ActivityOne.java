@@ -256,49 +256,48 @@ public class ActivityOne extends AppCompatActivity implements AdapterView.OnItem
 
                 switch (textspinnertuman) {
                     case "Aнгрен шаҳри": {
-                        tumannomi = "ангрен шаҳри";
-
+                        filterList("тошкент вилояти" + " " + "ангрен шаҳри");
                         break;
                     }
 
                     case "Бекобод шаҳри": {
-                        tumannomi = "бекобод шаҳри";
+                        filterList("тошкент вилояти" + " " + "бекобод шаҳри");
                         break;
                     }
                     case "Бекобод тумани": {
-                        tumannomi = "бекобод тумани";
+                        filterList("тошкент вилояти" + " " + "бекобод тумани");
                         break;
                     }
                     case "Бўка тумани": {
-                        tumannomi = "бўка тумани";
+                        filterList("тошкент вилояти" + " " + "бўка тумани");
                         break;
                     }
                     case "Бўстонлиқ тумани": {
-                        tumannomi = "бўстонлиқ тумани";
+                        filterList("тошкент вилояти" + " " + "бўстонлиқ тумани");
                         break;
                     }
                     case "Чиноз тумани": {
-                        tumannomi = "чиноз тумани";
+                        filterList("тошкент вилояти" + " " + "чиноз тумани");
                         break;
                     }
                     case "Чирчиқ шаҳри": {
-                        tumannomi = "чирчиқ шаҳри";
+                        filterList("тошкент вилояти" + " " + "чирчиқ шаҳри");
                         break;
                     }
-                    case "Ўрта чирчиқ тумани<": {
-                        tumannomi = "ўрта чирчиқ тумани";
+                    case "Ўрта чирчиқ тумани": {
+                        filterList("тошкент вилояти" + " " + "ўрта чирчиқ тумани");
                         break;
                     }
                     case "Оҳангарон тумани": {
-                        tumannomi = "оҳангарон тумани";
+                        filterList("тошкент вилояти" + " " + "оҳангарон тумани");
                         break;
                     }
                     case "Олмалиқ шаҳри": {
-                        tumannomi = "олмалиқ шаҳри";
+                        filterList("тошкент вилояти" + " " + "олмалиқ шаҳри");
                         break;
                     }
                     case "Оққўрғон тумани": {
-                        tumannomi = "оққўрғон тумани";
+                        filterList("тошкент вилояти" + " " + "оққўрғон тумани");
                         break;
                     }
                 }

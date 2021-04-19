@@ -5,12 +5,17 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.GridLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.File;
 
 import maes.tech.intentanim.CustomIntent;
 
@@ -43,6 +48,23 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.birnchiitem){
 
+            Toast.makeText(this, "Созламалар", Toast.LENGTH_SHORT).show();
+            Intent intent= new Intent(getApplicationContext(),Collapsing.class);
+            startActivity(intent);
+
+        }else if (id == R.id.ikkinchiitem){
+            Toast.makeText(this, "Созламалар", Toast.LENGTH_SHORT).show();
+
+        } else if (id == R.id.uchinchiitem){
+            ApplicationInfo api = getApplicationContext().getApplicationInfo();
+            String apkpath = api.sourceDir;
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("application/vnd.android.package-archive");
+            intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(apkpath)));
+            startActivity(Intent.createChooser(intent, "ShareVia"));
+        }
+        else if (id == R.id.tortinchiitem){
+            Toast.makeText(this, "Созламалар", Toast.LENGTH_SHORT).show();
         }
         return true;
     }
