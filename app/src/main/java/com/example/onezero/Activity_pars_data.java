@@ -23,7 +23,7 @@ import com.google.android.gms.tasks.Task;
 
 public class Activity_pars_data extends AppCompatActivity {
 
-    TextView textView1, textView2, textView3, textView4;
+    TextView textView1, textView2, textView3, textView4, textView5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +34,13 @@ public class Activity_pars_data extends AppCompatActivity {
         textView2 = findViewById(R.id.textView2);
         textView3 = findViewById(R.id.textView3);
         textView4 = findViewById(R.id.textView4);
+        textView5 = findViewById(R.id.textView5);
 
         textView1.setText(getIntent().getStringExtra("nomi"));
         textView2.setText(getIntent().getStringExtra("manzili"));
         textView3.setText(getIntent().getStringExtra("raqami"));
         textView4.setText(getIntent().getStringExtra("joylashuvi"));
+        textView5.setText(getIntent().getStringExtra("faoliyati"));
 
     }
 

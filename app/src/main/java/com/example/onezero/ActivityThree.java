@@ -17,7 +17,7 @@ import java.util.HashMap;
 
 public class ActivityThree extends AppCompatActivity {
 
-    private EditText nomisave, manzilisave, raqamisave, joylashuvisave;
+    private EditText nomisave, faoliyatisave, manzilisave, raqamisave, joylashuvisave;
     private Button save;
     private FirebaseDatabase db = FirebaseDatabase.getInstance();
     private DatabaseReference root = db.getReference().child("User");
@@ -28,6 +28,7 @@ public class ActivityThree extends AppCompatActivity {
         setContentView(R.layout.activity_three);
 
         nomisave = findViewById(R.id.nomisave);
+        faoliyatisave = findViewById(R.id.faoliyatisave);
         manzilisave = findViewById(R.id.manzilisave);
         raqamisave = findViewById(R.id.raqamisave);
         joylashuvisave = findViewById(R.id.joylashuvisave);
@@ -35,6 +36,7 @@ public class ActivityThree extends AppCompatActivity {
 
         save.setOnClickListener(v -> {
             String nomi = nomisave.getText().toString();
+            String faoliyati = faoliyatisave.getText().toString();
             String manzili = manzilisave.getText().toString();
             String raqami = raqamisave.getText().toString();
             String joylashuvi = joylashuvisave.getText().toString();
@@ -42,6 +44,7 @@ public class ActivityThree extends AppCompatActivity {
             HashMap<String , String> userMap = new HashMap<>();
 
             userMap.put("nomi" , nomi);
+            userMap.put("faoliyati" , faoliyati);
             userMap.put("manzili" , manzili);
             userMap.put("raqami" , raqami);
             userMap.put("joylashuvi" , joylashuvi);

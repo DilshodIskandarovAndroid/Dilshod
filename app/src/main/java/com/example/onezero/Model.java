@@ -3,13 +3,14 @@ package com.example.onezero;
 public class Model
 
 {
-    String Nomi,manzili,raqami,joylashuvi;
+    String Nomi,faoliyati,manzili,raqami,joylashuvi;
 
     public Model() {
     }
 
-    public Model(String Nomi, String manzili, String raqami, String joylashuvi) {
+    public Model(String Nomi, String faoliyati, String manzili, String raqami, String joylashuvi) {
         this.Nomi = Nomi;
+        this.faoliyati = faoliyati;
         this.manzili = manzili;
         this.raqami = raqami;
         this.joylashuvi = joylashuvi;
@@ -23,6 +24,13 @@ public class Model
         this.Nomi = Nomi;
     }
 
+    public String getFaoliyati() {
+        return faoliyati;
+    }
+
+    public void setFaoliyati(String faoliyati) {
+        this.faoliyati = faoliyati;
+    }
     public String getManzili() {
         return manzili;
     }

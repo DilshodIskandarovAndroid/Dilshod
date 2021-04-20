@@ -1,7 +1,7 @@
 <resources>
 
     <string name="app_name">Қулай ҳудуд</string>
-    <string name="soglikvazirlik">Ўзбекистон Республикаси Соғлиқни сақлаш вазирлиги wеб-саҳифаси</string>
+    <string name="soglikvazirlik">Ўзб. Рес. Соғлиқни сақлаш вазирлиги wеб-саҳифаси</string>
     <string name="title_activity_maps">Map</string>
     <string name="teztibbiy">Тез тиббий ёрдам хизмати</string>
     <string name="lifeguard">Фавқулодда вазиятлар вазирлиги</string>
@@ -22,6 +22,9 @@
     <string name="menu2">Улашиш</string>
     <string name="menu3">Дастурни бахолаш</string>
     <string name="ijtimoitarmoqlar">Ижтимоий тармоқларда</string>
+    <string name="kambagallikniqistartirish">Ўзб. Республикаси Иқтисодий тараққиёт ва камбағалликни қисқартириш вазирлиги</string>
+    <string name="maktabgachatalimvazirligi">Ўзбекистон Республикаси Мактабгача таълим вазирлиги</string>
+    <string name="email">Емаил манзили :</string>
 
     <string-array name="Viloyatlar">
         <item>Вилоятлар бўйича саралаш</item>
@@ -46,9 +49,9 @@
     <string-array name="Toshkent">
         <item>Шаҳар ёки туман номи</item>
         <item>Aнгрен шаҳри</item>
+        <item>Мирзо-Улуғбек тумани</item>
         <item>Бекобод шаҳри</item>
         <item>Бекобод тумани</item>
-        Тошкент вилояти
         <item>Бўка тумани</item>
         <item>Бўстонлиқ тумани</item>
         <item>Чиноз тумани</item>

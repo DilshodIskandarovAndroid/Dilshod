@@ -259,6 +259,10 @@ public class ActivityOne extends AppCompatActivity implements AdapterView.OnItem
                         filterList("тошкент вилояти" + " " + "ангрен шаҳри");
                         break;
                     }
+                    case "Мирзо-Улуғбек": {
+                        filterList("тошкент вилояти" + " " + "мирзо-улуғбек");
+                        break;
+                    }
 
                     case "Бекобод шаҳри": {
                         filterList("тошкент вилояти" + " " + "бекобод шаҳри");

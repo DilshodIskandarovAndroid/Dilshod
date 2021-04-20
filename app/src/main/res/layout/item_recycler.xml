@@ -18,20 +18,30 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_margin="8dp"
             android:id="@+id/Nomi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="8dp"
             android:layout_marginStart="8dp"
             android:text="nomi"
             android:textColor="@color/black"
             android:textSize="14sp" />
 
         <TextView
+            android:id="@+id/faoliyati"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:text="faoliyati"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
             android:id="@+id/manzili"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="8dp"
             android:text="manzili"
             android:textColor="@color/black"
             android:textSize="14sp" />
@@ -47,12 +57,10 @@
 
         <TextView
             android:id="@+id/joylashuvi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="joylashuvi"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:textColor="@color/black"
-            android:textSize="14sp" />
+            android:textSize="0sp" />
 
     </LinearLayout>
 

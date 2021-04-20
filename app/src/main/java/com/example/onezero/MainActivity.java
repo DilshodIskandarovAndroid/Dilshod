@@ -49,11 +49,9 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.birnchiitem){
 
             Toast.makeText(this, "Созламалар", Toast.LENGTH_SHORT).show();
-            Intent intent= new Intent(getApplicationContext(),Collapsing.class);
-            startActivity(intent);
 
         }else if (id == R.id.ikkinchiitem){
-            Toast.makeText(this, "Созламалар", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Дастур ҳақида", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.uchinchiitem){
             ApplicationInfo api = getApplicationContext().getApplicationInfo();
@@ -64,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(Intent.createChooser(intent, "ShareVia"));
         }
         else if (id == R.id.tortinchiitem){
-            Toast.makeText(this, "Созламалар", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Дастурни бахолаш", Toast.LENGTH_SHORT).show();
         }
         return true;
     }

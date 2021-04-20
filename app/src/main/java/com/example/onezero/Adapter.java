@@ -39,6 +39,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
     {
         Model model = mList.get(position);
         holder.Nomi.setText(model.getNomi());
+        holder.faoliyati.setText(model.getFaoliyati());
         holder.manzili.setText(model.getManzili());
         holder.raqami.setText(model.getRaqami());
         holder.joylashuvi.setText(model.getJoylashuvi());
@@ -50,6 +51,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
             {
                 Intent iintent = new Intent(context, Activity_pars_data.class);
                 iintent.putExtra("nomi",model.getNomi());
+                iintent.putExtra("faoliyati",model.getFaoliyati());
                 iintent.putExtra("manzili",model.getManzili());
                 iintent.putExtra("raqami",model.getRaqami());
                 iintent.putExtra("joylashuvi",model.getJoylashuvi());
@@ -68,12 +70,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
 
     public static class ViewHolder extends RecyclerView.ViewHolder
     {
-        TextView Nomi, manzili, raqami, joylashuvi;
+        TextView Nomi, faoliyati, manzili, raqami, joylashuvi;
 
         public ViewHolder(View itemView)
         {
             super(itemView);
             Nomi = itemView.findViewById(R.id.Nomi);
+            faoliyati = itemView.findViewById(R.id.faoliyati);
             manzili = itemView.findViewById(R.id.manzili);
             raqami = itemView.findViewById(R.id.raqami);
             joylashuvi = itemView.findViewById(R.id.joylashuvi);
